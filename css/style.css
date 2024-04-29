@@ -1,0 +1,820 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(0, 0, 0, 0.903);
+    
+}
+/* header....................................... */
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+.header-logo{
+    width: 100px;
+    height: 60px;
+    /* background-color: red; */
+    margin-left: 50px;
+}
+.header-icon{
+  width: 150px;
+  height: 60px;
+  margin-right: 50px;
+  position: relative;
+}
+.header-icon ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.header-icon ul li {
+   line-height: 60px;
+
+}
+.header-icon ul li a{
+    text-decoration:none ;
+    font-size: 30px;
+    color: rgb(241, 246, 246);
+
+}
+.header-bar{
+    width: 200px;
+    /* height: 90vh; */
+    background-color: rgba(248, 248, 248, 0.106);
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    box-shadow: -1px 1px 4px 1px rgb(7, 237, 214);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+
+}
+.header-bar div{
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(161, 154, 154, 0.135);
+    text-transform: capitalize;
+}
+.header-bar div:hover{
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(161, 154, 154, 0.41);
+    box-shadow: -1px 1px 6px 2px rgb(2, 250, 188);
+    opacity: 0.7;
+}
+.header-bar div a{
+    color: white;
+}
+.icon-active:hover .header-bar{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+
+
+/* media....................... */
+@media(max-width:768px){
+    .header-icon ul li a{
+        font-size: 24px;
+    }
+    .header-bar div a{
+        font-size: 20px;
+    }
+    .header-bar{
+        width: 180px;
+    }
+    
+}
+@media(max-width:576px){
+    .header-icon ul li a{
+        font-size: 22px;
+    }
+    .header-bar div a{
+        font-size: 18px;
+    }
+    .header-bar{
+        width: 160px;
+    }
+}
+
+
+
+/* home........................................... */
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/home2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    background-position: 850px 40px;
+    position: relative;
+}
+
+ .home-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.049);
+} 
+.home-content{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.home-content h1{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    color: white;
+    font-size: 44px;
+    text-transform: uppercase;
+    line-height: 54px;
+}
+.home-content h1 span{
+   color: rgb(8, 180, 159);
+}
+.home-content p{
+    width: 500px;
+   position: absolute;
+   top: 360px;
+   left: 40px;
+   color: white;
+   line-height: 24px;
+   font-size: 18px;
+}
+.home-icon{
+    width: 300px;
+    position: absolute;
+    top: 530px;
+    left: 200px;
+}
+.home-icon-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.home-icon-list li{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px white;
+
+}
+.home-icon-list li a{
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+
+}
+.home-icon-list li:hover{
+    opacity: 0.3;
+}
+.home-liner{
+    width: 340px;
+    height: 55px;
+    background-image: -moz-linear-gradient(left,rgb(10, 229, 204),rgb(12, 126, 112),rgb(1, 21, 21),rgba(0, 0, 0, 0.415));
+    position: absolute;
+    top: 130px;
+    left: 520px;
+
+}
+.home-liner-2{
+    width: 220px;
+    height: 55px;
+    background-image: -moz-linear-gradient(left,rgb(10, 229, 204),rgb(12, 126, 112),rgb(1, 21, 21),rgba(0, 0, 0, 0.415));
+    position: absolute;
+    top:260px ;
+    left:640px ;
+
+}
+/* media............. */
+@media(max-width:768px){
+    .home-content h1{
+        font-size: 27px;
+        width: 380px;
+        margin-left: -10px;
+    }
+    .home-content p{
+        width: 360px;
+       margin-left: -10px;
+    }
+    .home-icon-list li{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .home-icon{
+        margin-left: -150px;
+    }
+    .home-icon-list li a{
+        font-size: 28px;
+    }
+    .home-liner{
+        width: 200px;
+        margin-left: -250px;   
+    }
+    .home-liner-2{
+        width: 100px;
+        margin-left:-280px ;
+    
+    }
+    .home{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/home2.jpg);
+        background-repeat: no-repeat;
+        background-size: 300px 500px;
+        background-color: black;
+        background-position: 430px 100px;
+        overflow: hidden;
+    }
+}
+@media(max-width:576px){
+    .home-content h1{
+        font-size: 22px;
+        width: 300px;
+        margin-left: -20px;
+        margin-top: -50px;
+    }
+    .home-content p{
+        width: 270px;
+       margin-left: -20px;
+       margin-top: -50px;
+    }
+    .home-icon-list li{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .home-icon{
+        margin-left: -210px;
+    }
+    .home-icon-list li a{
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .home-liner{
+        width: 150px;
+        margin-left: -280px; 
+        margin-top: -30px;  
+    }
+    .home-liner-2{
+        width: 40px;
+        margin-left:-350px ;
+        margin-top: -50px;
+    
+    }
+    .home{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/home2.jpg);
+        background-repeat: no-repeat;
+        background-size: 260px 470px;
+        background-color: black;
+        background-position: 300px 150px ;
+        overflow: hidden;
+    }
+}
+/* about............................................................. */
+.about{
+    width: 100%;
+    height: 600px;
+}
+.about-container{
+    width: 80%;
+    margin: auto;
+}
+.about-parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+  
+   .about-img{
+   height: 600px;
+   
+    background-image: url(../images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.about-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69, 69, 69, 0.365);
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}  
+.about-head{
+    text-transform: capitalize;
+    line-height: 50px;
+    position: absolute;
+    top: 140px;
+}
+.about-head h2{
+    color: aqua;
+    font-size: 40px;
+    position: relative;
+}
+.about-head h2::after{
+    position: absolute;
+    content: "about";
+    top: -20px;
+    left: -10px;
+    font-size: 100px;
+    color: rgb(105, 103, 103);
+    opacity: 0.1;
+}
+.about-head h2 span{
+    color: rgb(246, 248, 248);
+    
+}
+.about-head h3{
+    color: rgb(234, 235, 235);   
+}
+.about-content p{
+    color: rgb(234, 232, 232);
+    position: absolute;
+    top: 260px;
+    line-height: 22px;
+    font-size: 19px;
+}
+.about-button{
+    position:absolute ;
+    top: 550px;
+}
+.about-button button{
+    padding: 5px 15px;
+    border: none;
+    font-size: 20px;
+    color: rgb(246, 243, 243);
+}
+.about-button button:hover{
+   opacity: 0.7;
+   cursor: pointer;
+}
+.about-bt1{
+    background-color: aqua;
+    margin-right: 10px;
+}
+.about-bt2{
+    background-color: rgb(47, 46, 46);
+}
+/* media...................... */
+@media(max-width:768px){
+    .about-container{
+        width: 90%;
+    }
+    .about{
+        overflow: hidden;
+    }
+    .about-img{
+         background-image: url(../images/about.jpg);
+         background-repeat: no-repeat;
+         background-size: 350px 600px;
+         background-position: center;
+         position: relative;
+     }
+     .about-content{
+        margin-top: -85px;
+     }
+     .about-content p{
+        position: absolute;
+        top: 260px;
+        font-size: 17px;
+    }
+    .about-head h3{
+        font-size: 20px;   
+        line-height: 25px;
+    }
+    .about-button button{
+        margin-top: 90px;
+    }
+}
+@media(max-width:576px){
+    .about-container{
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    .about{
+        overflow: hidden;
+    }
+    .about-img{
+         background-image: url(../images/about.jpg);
+         background-repeat: no-repeat;
+         background-size: 300px 600px;
+         background-position: center;
+         position: relative;
+     }
+     .about-content{
+        margin-top: -115px;
+     }
+     .about-content p{
+        position: absolute;
+        top: 240px;
+        font-size: 16px;
+    }
+    .about-head h3{
+        font-size: 20px;   
+        line-height: 25px;
+    }
+    .about-button button{
+        margin-top:132px ;
+        font-size: 20px;
+    }
+    .plan-item-head h2{
+        font-size: 20px;
+    }
+    .plan-item-head p{
+        font-size: 17px;
+    }
+    .about-head h2::after{
+       
+        font-size: 70px;
+        
+    }
+    .about-button{
+        
+    }
+}
+/* plan.......................................................... */
+.plan{
+    width: 100%;
+}
+.plan-titel{
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    line-height: 50px;
+}
+.plan-titel h2{
+    text-transform: capitalize;
+    font-size: 40px;
+    color: aqua;
+    position: relative;
+}
+.plan-titel h2::after{
+    position: absolute;
+    content: "about";
+    top: -23px;
+    left: 515px;
+    font-size: 100px;
+    color: rgb(105, 103, 103);
+    opacity: 0.1
+}
+.plan-titel h2 span{
+    color: rgb(243, 246, 246);
+}
+.plan-titel-bt{
+    width: fit-content;
+    margin:20px auto;
+    background-color: rgba(17, 17, 17, 0.232);
+    border-radius: 20px 0;
+    border-left: 2px solid aqua;
+    border-right: 2px solid aqua;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 2px 1px rgb(59, 59, 59);
+    
+}
+.plan-titel-bt button{
+    padding: 8px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+.plan-titel-bt button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.plan-titel-bt .paln-titel-btn {
+   background-color:rgb(43, 43, 43) ;
+   border-radius: 20px 0 0 0;
+}
+.plan-container{
+    width: 80%;
+    margin:20px auto;
+}
+.plan-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.plan-item{
+    border: none;
+    border-top: 3px solid aqua;
+    border-bottom: 3px solid aqua;
+    box-shadow: 1px 1px 10px 4px rgb(6, 6, 6);
+    border-radius: 20px 0;
+    width: 30%;
+}
+.plan-item-head{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: auto;
+    text-align: right;
+    border-right: 3px solid aqua;
+    padding-right: 20px;
+    line-height: 30px;
+}
+.plan-item-head h2{
+    font-size: 26px;
+    color: aqua;
+}
+.plan-item-head p{
+    font-size: 19px;
+    color: rgb(225, 233, 233);
+}
+.plan-item-content{
+ margin-top: 20px;
+}
+.plan-item-content div{
+  background-color: rgb(15, 14, 14);
+  display: flex;
+  justify-content: space-between;
+  border-left: 3px solid aqua;
+  padding-left: 15px;
+  box-shadow: -1px 1px 4px 1px rgb(52, 51, 51);
+  padding-right: 10px;
+}
+.plan-item-content div h2{
+  font-size: 24px;
+  line-height: 60px;
+  color: white;
+}
+.plan-item-content div p{
+  font-size: 19px;
+  color: rgb(205, 203, 203);
+  line-height: 60px;
+
+}
+.plan-item-offer{
+    margin: 20px 0;
+    text-align: center;
+    line-height: 28px;
+}
+.plan-item-offer h2{
+    color: aqua;
+    font-size: 28px;
+}
+.plan-item-offer p{
+    color: rgb(219, 223, 223);
+    font-size: 29px;
+    margin-top: 10px;
+    font-weight: 900;
+}
+.plan-item-offer>p>span{
+    color: rgb(168, 163, 163);
+}
+.plan-item-offer button{
+    margin-top: 20px;
+    padding: 6px 35px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.139);
+    color: white;
+    font-size: 22px;
+    box-shadow: 1px 1px 3px 1px rgb(64, 64, 64);
+
+}
+.plan-item-offer .plan-item-bt2{
+    background-color: aqua;
+}
+.plan-item-offer button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* media.................... */
+
+@media(max-width:768px){
+    .plan-parent{
+        display: flex;
+        flex-direction: column;
+    }
+    .plan-item{
+        width: 80%;
+        margin:10px auto;
+    }
+    .plan{
+        overflow: hidden;
+    }
+    .plan-titel h2::after{
+       margin-left: -290px;
+    }
+}
+
+@media(max-width:576px){
+    
+    .plan-item{
+        width: 100%;
+        margin:10px auto;
+    }
+    .plan{
+        overflow: hidden;
+    }
+    .plan-titel h2::after{
+       margin-left: -340px;
+       font-size: 70px;
+    }
+    .plan-container{
+        width: 90%;
+    }
+   
+  .plan-titel h2{
+    font-size: 35px;
+}
+}
+/* .img-fixed.......................................................................... */
+.img-fixed{
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/about2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.overlay-fixed{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.813);
+}
+/* media................ */
+@media(max-width:768px){
+    .img-fixed{
+        background-position: center;
+    }
+}
+@media(max-width:576px){
+    .img-fixed{
+        background-position: center;
+    }
+}
+/* .information................................................... */
+.information{
+    width: 100%;
+}
+.information-container{
+    width: 80%;
+    margin: 50px auto;
+}
+.information-parent{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.info-head{
+ position: relative;
+ height: 80px;
+}
+.info-head i{
+  font-size: 40px;
+  color: rgb(11, 100, 100);
+}
+.info-head h2{
+  font-size: 35px;
+  color: aqua;
+  text-transform: capitalize;
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+.info-head p{
+  font-size: 18px;
+  color: rgb(191, 194, 194);
+  position: absolute;
+  top: 44px;
+  left: 60px;
+}
+.info-content{
+    font-size: 21px;
+    line-height: 24px;
+    color: white;
+    border-left: 3px solid aqua;
+    padding-left: 10px;
+}
+.info-line{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: auto;
+  padding-right: 20px;
+}
+.info-line div{
+    width:60px ;
+    height: 6px;
+    background-color: aqua;
+}
+.info-img{
+    width: 94%;
+    height: 100%;
+    margin-left: auto;
+    background-image: url(../images/ihfo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+.info-img-2{
+    width: 94%;
+    height: 100%;
+    margin-left: auto;
+    background-image: url(../images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    transition: 0.5s;
+
+}
+.info-img:hover{
+    transform: scale(1.1,1.1);
+}
+.info-img-2:hover{
+    transform: scale(1.1,1.1);
+}
+/* media......................... */
+ @media (max-width:768px){
+    .information-container{
+        width: 90%;
+    }
+    .information-parent{
+        display: grid;
+        grid-template-columns:1fr  1fr;
+        grid-template-rows:repeat(2,300px);
+    }
+    .information-item-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }  
+}
+
+ @media (max-width:576px){
+    .information-container{
+        width: 96%;
+    }
+    .information-parent{
+        display: grid;
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows:repeat(3,300px);
+    }
+    .information-item-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    } 
+    .information-item-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 50px;
+        width: 90%;
+
+    } 
+    .information-item-3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 20px;
+        width: 90%;
+    } 
+    .information-item-2 .info-img{
+        background-position: center -20px;
+      } 
+  
+    .information-item-3 .info-img-2{
+        background-position: center -200px ;
+      } 
+}
+
+/* the end ........................................................................ */
